@@ -13,7 +13,7 @@ import { insights } from './src/content/insights.mjs';
 
 const { site } = C;
 const PREVIEW = !!process.env.PREVIEW;
-const OUT = PREVIEW ? 'dist-preview' : 'dist';
+const OUT = process.env.OUT_DIR || (PREVIEW ? 'dist-preview' : 'dist');
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 // ---------- helpers ----------

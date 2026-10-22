@@ -1,42 +1,37 @@
-# Builds a preview of the site and publishes it to GitHub Pages on every push to main.
-# One-time setup: repository Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
-# Production hosting is Netlify (see netlify.toml); this Pages copy is a shareable preview.
-name: Deploy preview to GitHub Pages
+# Keeps the GitHub Pages preview up to date.
+# Pages is set to "Deploy from a branch" (main, root): the root index.html forwards to preview/,
+# and this workflow rebuilds preview/ whenever the site source changes, then commits it.
+# Commits made with GITHUB_TOKEN do not trigger new workflow runs, so this cannot loop.
+name: Rebuild Pages preview
 
 on:
   push:
     branches: [main]
+    paths: ['src/**', 'build.mjs']
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: preview-build
   cancel-in-progress: true
 
 jobs:
-  build:
+  rebuild:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Build preview (relative links, works under /web-Illustrators/)
-        run: PREVIEW=1 node build.mjs
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist-preview
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build production site (sanity check)
+        run: node build.mjs
+      - name: Build preview into preview/
+        run: OUT_DIR=preview PREVIEW=1 node build.mjs
+      - name: Commit updated preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add preview
+          if git diff --cached --quiet; then echo "Preview already up to date"; else git commit -m "Rebuild Pages preview" && git push; fi

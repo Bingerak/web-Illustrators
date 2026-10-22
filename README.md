@@ -1,6 +1,8 @@
 # Tening Boris — Portfolio website
 
-**Live preview:** https://bingerak.github.io/web-Illustrators/ (GitHub Pages, updates on every push to `main`)
+**Live preview:** https://bingerak.github.io/web-Illustrators/
+
+GitHub Pages serves this repo from `main` (root). The root `index.html` forwards to `preview/`, a relative-link build of the site. The workflow in `.github/workflows/pages.yml` rebuilds `preview/` automatically whenever `src/` or `build.mjs` changes. To rebuild it by hand: `OUT_DIR=preview PREVIEW=1 node build.mjs`. The contact form cannot send from GitHub Pages; deploy to Netlify for the real site.
 
 A fast, accessible, multi-page portfolio for **Tening Boris, Frontend Developer in Yaoundé, Cameroon**.
 Static HTML generated from one content file by a zero-dependency Node script. No framework, no database, nothing to patch.
