@@ -21,7 +21,7 @@ export const site = {
   phoneDisplay: '+237 682 380 446',
   whatsapp: '237682380446', // digits only, used for wa.me links (same number as phone)
   whatsappDisplay: '+237 682 380 446',
-  linkedin: 'https://www.linkedin.com/in/boris-tening-189b54226',
+  linkedin: 'https://www.linkedin.com/in/tening-boris-189b54226',
   responseTime: 'I reply within one working day.',
   hours: 'Monday – Friday, 8:00 – 18:30 WAT',
 };

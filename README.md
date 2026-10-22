@@ -89,7 +89,7 @@ dist/                      built site (generated, do not edit)
 These are on the site but came from sources that disagree or are dated. Please check each one.
 
 1. **Phone and WhatsApp:** confirmed as **+237 682 380 446** for both (22 Oct 2026).
-2. **LinkedIn URL.** The brief gave `linkedin.com/in/tening-boris-189b54226`; your resume and old site use `linkedin.com/in/boris-tening-189b54226`. The site uses the resume version. LinkedIn blocked automated access, so neither could be checked.
+2. **LinkedIn URL:** confirmed as linkedin.com/in/tening-boris-189b54226 (the address Google lists and your Business Profile uses).
 3. **Domain.** Canonical URLs use `https://webillustrators.online` (from your resume). Change `SITE_URL` if the site will live elsewhere.
 4. **"25% increase in client retention"** appears in the Experience section exactly as stated on your resume. Keep it only if you can explain how it was measured if a client asks.
 5. **Your role on each project.** Every case study says "Project lead within the Highupweb team: coordinated delivery and built the frontend", based on your old site's "project led by me" credit. Adjust per project if your role differed.
