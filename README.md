@@ -98,6 +98,8 @@ These are on the site but came from sources that disagree or are dated. Please c
 8. **Budget ranges** on the contact form (FCFA with approximate USD) are suggestions; adjust to your pricing.
 9. **"Available for freelance projects and remote roles"** in the hero. Remove it in `site.mjs` when you are booked.
 
+10. **New projects (Ebikes&Gear, AfrikLink Digital, AMZ Star Pallets, Women Growing Together)** are labelled "Freelance project" and "Web developer". BNCA-USA is labelled "Highupweb, 2023" because its footer credits Highupweb. Correct these in `src/content/site.mjs` if your role or the context was different, and add specifics (what you built, when) to each `role` line.
+
 ### Deliberately left out (can be added once verified)
 
 - Old-site counters ("67 projects", "45 happy customers", "03 awards", "06+ years") — they conflict with the resume.

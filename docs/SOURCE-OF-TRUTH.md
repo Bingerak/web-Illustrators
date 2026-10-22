@@ -42,6 +42,20 @@ Every fact on the website traces back to one of the sources below. Anything not 
 | Highupweb Academy | ICT training centre: courses, gallery, testimonials, blog, news, bilingual switcher, live chat | Education |
 | Auto École Highupweb (Highupweb Driving School) | Driving school, Yaoundé: services, pricing, gallery, FAQ, "request a callback" CTA | Local services |
 
+## 2b. Projects added 22 Oct 2026 (thumbnails from the `projects` folder)
+
+Facts were read from each live site on 22 Oct 2026, except Women Growing Together, whose site refuses automated reading; its case study is written from the homepage screenshot only.
+
+| Project | Source | Context shown | Platform shown |
+|---|---|---|---|
+| Ebikes&Gear (UK) | ebikesandgear.co.uk | Freelance project (to confirm) | JavaScript single-page app (from page markup) |
+| AfrikLink Digital (Cameroon) | afriklinkdigital.com | Freelance project (to confirm) | WordPress + Elementor (generator tag) |
+| BNCA-USA | bnca-usa.com | Highupweb, 2023 (footer credits HIGHUPWEB) | WordPress + Elementor (generator tag) |
+| AMZ Star Pallets Liquidation (USA) | amzstarpalletsliquidation.com | Freelance project (to confirm) | WordPress + WooCommerce (page paths) |
+| Women Growing Together (Cameroon) | screenshot | Freelance project (to confirm) | not shown, unconfirmed |
+
+Role text on these five is deliberately general ("Web development for the site…"). Replace it with specifics once confirmed.
+
 ## 3. Assets and their sources
 
 All from the `WebIllustrators website content` folder, owned by TENING BORIS:

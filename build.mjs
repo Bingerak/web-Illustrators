@@ -231,7 +231,7 @@ const go = `<span class="svc-row__go" aria-hidden="true">${I.arrowUpRight}</span
 // ---------- pages ----------
 function homePage() {
   const h = C.home;
-  const featured = C.projects.slice(0, 3);
+  const featured = C.projects.filter((p) => p.featured).slice(0, 3);
   const body = `
 <section class="hero on-ink">
   ${stripes()}
@@ -287,15 +287,15 @@ function homePage() {
 <section class="section on-ink" aria-labelledby="work-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><p class="eyebrow">Selected work</p><h2 id="work-title">Websites I've led, live and in use</h2></div>
-      <p class="muted">Agency projects delivered with the Highupweb team in Yaoundé, where I was project lead.</p>
+      <div><p class="eyebrow">Selected work</p><h2 id="work-title">Websites I've built, live and in use</h2></div>
+      <p class="muted">Client websites for businesses and organisations in Cameroon, the UK and the USA.</p>
     </div>
     <div class="features">
       ${featured.map((p) => `
       <article class="feature reveal">
         <a class="feature__media" href="${L('/work/' + p.slug + '/')}" tabindex="-1" aria-hidden="true">${browser(p)}</a>
         <div>
-          <p class="feature__meta">${p.categoryLabel} · Project lead</p>
+          <p class="feature__meta">${p.categoryLabel} · ${p.roleShort}</p>
           <h3><a href="${L('/work/' + p.slug + '/')}">${p.title}</a></h3>
           <p>${p.summary}</p>
           <div class="tags">${p.highlights.slice(0, 3).map((t) => `<span class="tag">${t}</span>`).join('')}</div>
@@ -476,7 +476,7 @@ ${pageHero({ crumbs, eyebrow: 'Portfolio', h1: w.headline, lede: w.lede })}
       </a>`).join('')}
       <p class="work-grid__empty" hidden>No projects in this category yet.</p>
     </div>
-    <p class="credit-note">${w.credit} Client names and screenshots are shown as published on my original portfolio.</p>
+    <p class="credit-note">${w.credit}</p>
   </div>
 </section>
 ${ctaBand({ title: 'Need something similar?', text: 'Whether it is a store, a school website or a site for your local business, tell me what you have in mind.' })}`;
@@ -489,13 +489,14 @@ function projectPage(p, i) {
   const next = C.projects[(i + 1) % C.projects.length];
   const crumbs = [{ name: 'Home', href: '/' }, { name: 'Work', href: '/work/' }, { name: p.title, href: `/work/${p.slug}/` }];
   const title = `${p.title} — ${p.categoryLabel} Website Case Study | TENING BORIS`;
-  const description = `${p.summary} Case study of the ${p.title} website, led by TENING BORIS at Highupweb in Yaoundé, Cameroon.`;
+  const description = `${p.summary} Case study of the ${p.title} website by TENING BORIS, frontend developer in Yaoundé, Cameroon.`;
   const body = `
 ${pageHero({ crumbs, eyebrow: `Case study · ${p.categoryLabel}`, h1: p.title, lede: p.summary, extra: `
     <dl class="case-meta">
       <div><dt>Client</dt><dd>${p.client}</dd></div>
-      <div><dt>My role</dt><dd>Project lead</dd></div>
-      <div><dt>Delivered</dt><dd>${p.year}</dd></div>
+      <div><dt>My role</dt><dd>${p.roleShort}</dd></div>
+      <div><dt>Context</dt><dd>${p.context}</dd></div>
+      ${p.platform ? `<div><dt>Platform</dt><dd>${p.platform}</dd></div>` : ''}
       <div><dt>Live site</dt><dd><a href="${p.url}" target="_blank" rel="noopener">Visit website<span class="sr-only"> (opens in a new tab)</span></a></dd></div>
     </dl>` })}
 <section class="section" style="padding-top:0">
@@ -506,7 +507,7 @@ ${pageHero({ crumbs, eyebrow: `Case study · ${p.categoryLabel}`, h1: p.title, l
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="case-body reveal"><h2>Objective</h2><div class="prose"><p>${p.objective}</p></div></div>
-    <div class="case-body reveal"><h2>My role</h2><div class="prose"><p>${p.role}</p><p class="muted" style="font-size:1rem">The site was designed and delivered by the Highupweb agency team in Yaoundé.</p></div></div>
+    <div class="case-body reveal"><h2>My role</h2><div class="prose"><p>${p.role}</p>${p.note ? `<p class="muted" style="font-size:1rem">${p.note}</p>` : ''}</div></div>
     <div class="case-body reveal"><h2>Approach</h2><ol>${p.approach.map((x) => `<li>${x}</li>`).join('')}</ol></div>
     <div class="case-body reveal"><h2>What the site includes</h2><div><div class="tags">${p.highlights.map((t) => `<span class="tag">${t}</span>`).join('')}</div><div class="btn-row" style="margin-top:2rem"><a class="btn btn--dark" href="${p.url}" target="_blank" rel="noopener">Visit the live site ${I.external}<span class="sr-only"> (opens in a new tab)</span></a></div></div></div>
   </div>
@@ -519,9 +520,9 @@ ${pageHero({ crumbs, eyebrow: `Case study · ${p.categoryLabel}`, h1: p.title, l
     </a>
   </div>
 </section>
-${ctaBand({ title: `Planning a ${p.category === 'ecommerce' ? 'store' : p.category === 'education' ? 'school or training website' : 'business website'}?`, text: 'I can help you plan, build and launch a site like this one. Tell me about your project.' })}`;
+${ctaBand({ title: `Planning a ${p.category === 'ecommerce' ? 'store' : p.category === 'education' ? 'school or training website' : p.category === 'nonprofit' ? 'website for your association' : 'business website'}?`, text: 'I can help you plan, build and launch a site like this one. Tell me about your project.' })}`;
   return page({ title, description, path: `/work/${p.slug}/`, type: 'article', image: `/assets/img/${p.image}-1200.jpg`,
-    ld: [personLD, websiteLD, { '@type': 'CreativeWork', '@id': abs(`/work/${p.slug}/#work`), name: `${p.title} website`, description: p.summary, url: abs(`/work/${p.slug}/`), image: abs(`/assets/img/${p.image}-1200.jpg`), contributor: { '@id': personId }, producer: { '@type': 'Organization', name: 'Highupweb' }, sameAs: p.url, genre: p.categoryLabel, inLanguage: 'en' }, crumbsLD(crumbs)] }, '/work/', body);
+    ld: [personLD, websiteLD, { '@type': 'CreativeWork', '@id': abs(`/work/${p.slug}/#work`), name: `${p.title} website`, description: p.summary, url: abs(`/work/${p.slug}/`), image: abs(`/assets/img/${p.image}-1200.jpg`), contributor: { '@id': personId }, ...(p.producer ? { producer: { '@type': 'Organization', name: p.producer } } : {}), sameAs: p.url, genre: p.categoryLabel, inLanguage: 'en' }, crumbsLD(crumbs)] }, '/work/', body);
 }
 
 function contactPage() {
