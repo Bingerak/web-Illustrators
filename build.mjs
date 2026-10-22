@@ -87,6 +87,24 @@ const personLD = {
   knowsAbout: ['Frontend development', 'Responsive web design', 'WordPress', 'HTML5', 'CSS3', 'Web performance optimization', 'UI design', 'Cross-browser compatibility'],
   sameAs: [site.linkedin],
 };
+// The business as listed on Google Business Profile (service-area business: no street address).
+const businessLD = {
+  '@type': 'ProfessionalService',
+  '@id': abs('/#business'),
+  name: site.businessName,
+  alternateName: [site.brand, site.name],
+  description: 'Website design and frontend development in Yaoundé, Cameroon: business websites, WordPress, online stores, redesigns, speed optimisation and maintenance.',
+  url: abs('/'),
+  logo: abs('/icon-512.png'),
+  image: abs('/assets/img/tening-boris-square-400.jpg'),
+  telephone: site.phone,
+  email: site.email,
+  founder: { '@id': personId },
+  address: { '@type': 'PostalAddress', addressLocality: site.city, addressRegion: site.region, addressCountry: site.countryCode },
+  areaServed: [{ '@type': 'City', name: 'Yaoundé' }, { '@type': 'Country', name: 'Cameroon' }, { '@type': 'Place', name: 'Worldwide (remote)' }],
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:30' }],
+  sameAs: [site.linkedin],
+};
 const websiteLD = { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: `${site.name} — ${site.role}`, inLanguage: 'en', publisher: { '@id': personId } };
 const crumbsLD = (crumbs) => ({
   '@type': 'BreadcrumbList',
@@ -110,7 +128,7 @@ ${noindex ? '<meta name="robots" content="noindex">' : '<meta name="robots" cont
 <meta name="geo.region" content="CM-CE">
 <meta name="geo.placename" content="${site.city}">
 <meta property="og:type" content="${type}">
-<meta property="og:site_name" content="${site.name}">
+<meta property="og:site_name" content="${site.businessName}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${abs(p)}">
@@ -179,7 +197,7 @@ const footer = () => `
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span data-year>${new Date().getFullYear()}</span> ${site.name} · ${site.brand}</p>
+      <p>© <span data-year>${new Date().getFullYear()}</span> ${site.businessName}</p>
       <p>Designed and built by TENING BORIS in ${site.city}.</p>
     </div>
   </div>
@@ -345,7 +363,7 @@ function homePage() {
 ${ctaBand()}`;
   return page({
     title: h.title, description: h.description, path: '/',
-    ld: [personLD, websiteLD, { '@type': ['WebPage', 'ProfilePage'], '@id': abs('/#webpage'), url: abs('/'), name: h.title, isPartOf: { '@id': abs('/#website') }, about: { '@id': personId }, mainEntity: { '@id': personId }, inLanguage: 'en' }],
+    ld: [personLD, businessLD, websiteLD, { '@type': ['WebPage', 'ProfilePage'], '@id': abs('/#webpage'), url: abs('/'), name: h.title, isPartOf: { '@id': abs('/#website') }, about: { '@id': personId }, mainEntity: { '@id': personId }, inLanguage: 'en' }],
   }, '/', body);
 }
 
@@ -604,7 +622,7 @@ ${pageHero({ crumbs, eyebrow: 'Contact', h1: c.headline, lede: c.lede })}
   </div>
 </section>`;
   return page({ title: c.title, description: c.description, path: '/contact/',
-    ld: [personLD, websiteLD, { '@type': 'ContactPage', url: abs('/contact/'), name: c.title, about: { '@id': personId }, isPartOf: { '@id': abs('/#website') } }, crumbsLD(crumbs)] }, '/contact/', body);
+    ld: [personLD, businessLD, websiteLD, { '@type': 'ContactPage', url: abs('/contact/'), name: c.title, about: { '@id': personId }, isPartOf: { '@id': abs('/#website') } }, crumbsLD(crumbs)] }, '/contact/', body);
 }
 
 function thanksPage() {

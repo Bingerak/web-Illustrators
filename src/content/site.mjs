@@ -9,6 +9,7 @@ export const site = {
   url: (process.env.SITE_URL || 'https://webillustrators.online').replace(/\/$/, ''),
   name: 'TENING BORIS',
   brand: 'Web Illustrators',
+  businessName: 'Web Illustrators - TENING BORIS', // must match the Google Business Profile name exactly
   role: 'Frontend Developer',
   locale: 'en',
   city: 'Yaoundé',
