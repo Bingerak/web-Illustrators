@@ -136,7 +136,7 @@ const header = (active) => `
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="${L('/')}">${mark}<span><span class="brand__name">Tening Boris</span><span class="brand__role">Frontend developer</span></span></a>
+    <a class="brand" href="${L('/')}">${mark}<span><span class="brand__name">TENING BORIS</span><span class="brand__role">Frontend developer</span></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__label">Menu</span><span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span></button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul class="nav__list" role="list">
@@ -180,11 +180,11 @@ const footer = () => `
     </div>
     <div class="footer-bottom">
       <p>© <span data-year>${new Date().getFullYear()}</span> ${site.name} · ${site.brand}</p>
-      <p>Designed and built by Tening Boris in ${site.city}.</p>
+      <p>Designed and built by TENING BORIS in ${site.city}.</p>
     </div>
   </div>
 </footer>
-<a class="wa-float" href="${waHref()}" target="_blank" rel="noopener" aria-label="Chat with Tening Boris on WhatsApp (opens in a new tab)">${I.whatsapp}</a>
+<a class="wa-float" href="${waHref()}" target="_blank" rel="noopener" aria-label="Chat with TENING BORIS on WhatsApp (opens in a new tab)">${I.whatsapp}</a>
 <script src="${A('js/main.js')}?v=${JS_HASH}" defer></script>
 </body>
 </html>`;
@@ -249,8 +249,8 @@ function homePage() {
       </div>
       <div class="portrait">
         <span class="portrait__ring" aria-hidden="true"></span>
-        <div class="portrait__frame">${picture({ name: 'tening-boris-portrait', widths: [480, 794], sizes: '(max-width: 880px) 420px, 34vw', alt: 'Portrait of Tening Boris, frontend developer, in a navy blazer', w: 794, h: 992, eager: true })}</div>
-        <div class="portrait__tag"><strong>Tening Boris</strong><span>Frontend developer · ${site.city}</span></div>
+        <div class="portrait__frame">${picture({ name: 'tening-boris-portrait', widths: [480, 794], sizes: '(max-width: 880px) 420px, 34vw', alt: 'Portrait of TENING BORIS, frontend developer, in a navy blazer', w: 794, h: 992, eager: true })}</div>
+        <div class="portrait__tag"><strong>TENING BORIS</strong><span>Frontend developer · ${site.city}</span></div>
       </div>
     </div>
     <dl class="proof">
@@ -364,7 +364,7 @@ function aboutPage() {
         <p class="lede" style="margin-top:1.5rem">${a.lede}</p>
         <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href="${L('/contact/')}">Discuss your project ${I.arrow}</a><a class="btn btn--ghost" href="${site.linkedin}" target="_blank" rel="noopener">${I.linkedin} LinkedIn</a></div>
       </div>
-      <div class="portrait"><div class="portrait__frame">${picture({ name: 'tening-boris-about', widths: [480, 760], sizes: '(max-width: 860px) 92vw, 40vw', alt: 'Studio portrait of Tening Boris, frontend developer, in a navy blazer and light grey shirt', w: 760, h: 829, eager: true })}</div></div>
+      <div class="portrait"><div class="portrait__frame">${picture({ name: 'tening-boris-about', widths: [480, 760], sizes: '(max-width: 860px) 92vw, 40vw', alt: 'Studio portrait of TENING BORIS, frontend developer, in a navy blazer and light grey shirt', w: 760, h: 829, eager: true })}</div></div>
     </div>
   </div>
 </section>
@@ -488,8 +488,8 @@ ${ctaBand({ title: 'Need something similar?', text: 'Whether it is a store, a sc
 function projectPage(p, i) {
   const next = C.projects[(i + 1) % C.projects.length];
   const crumbs = [{ name: 'Home', href: '/' }, { name: 'Work', href: '/work/' }, { name: p.title, href: `/work/${p.slug}/` }];
-  const title = `${p.title} — ${p.categoryLabel} Website Case Study | Tening Boris`;
-  const description = `${p.summary} Case study of the ${p.title} website, led by Tening Boris at Highupweb in Yaoundé, Cameroon.`;
+  const title = `${p.title} — ${p.categoryLabel} Website Case Study | TENING BORIS`;
+  const description = `${p.summary} Case study of the ${p.title} website, led by TENING BORIS at Highupweb in Yaoundé, Cameroon.`;
   const body = `
 ${pageHero({ crumbs, eyebrow: `Case study · ${p.categoryLabel}`, h1: p.title, lede: p.summary, extra: `
     <dl class="case-meta">
@@ -591,7 +591,7 @@ ${pageHero({ crumbs, eyebrow: 'Contact', h1: c.headline, lede: c.lede })}
           <li><a href="${waHref()}" target="_blank" rel="noopener"><span class="contact-list__icon">${I.whatsapp}</span><span><small>WhatsApp</small>${site.whatsappDisplay}</span></a></li>
           <li><a href="mailto:${site.email}"><span class="contact-list__icon">${I.mail}</span><span><small>Email</small>${site.email}</span></a></li>
           <li><a href="tel:${site.phone}"><span class="contact-list__icon">${I.phone}</span><span><small>Phone</small>${site.phoneDisplay}</span></a></li>
-          <li><a href="${site.linkedin}" target="_blank" rel="noopener"><span class="contact-list__icon">${I.linkedin}</span><span><small>LinkedIn</small>Tening Boris</span></a></li>
+          <li><a href="${site.linkedin}" target="_blank" rel="noopener"><span class="contact-list__icon">${I.linkedin}</span><span><small>LinkedIn</small>TENING BORIS</span></a></li>
         </ul>
         <div class="contact-card__meta">
           <p>${site.city}, ${site.country} · West Africa Time (UTC+1)</p>
@@ -617,7 +617,7 @@ function thanksPage() {
     <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href="${L('/work/')}">Browse my work ${I.arrow}</a><a class="btn btn--ghost" href="${waHref()}" target="_blank" rel="noopener">${I.whatsapp} WhatsApp</a></div>
   </div>
 </section>`;
-  return page({ title: 'Thank you — Tening Boris', description: 'Your enquiry has been sent.', path: '/contact/thanks/', noindex: true }, '/contact/', body);
+  return page({ title: 'Thank you — TENING BORIS', description: 'Your enquiry has been sent.', path: '/contact/thanks/', noindex: true }, '/contact/', body);
 }
 
 function insightsPage() {
@@ -633,19 +633,19 @@ ${pageHero({ crumbs, eyebrow: 'Insights', h1: 'Notes on building better business
   </div>
 </section>
 ${ctaBand()}`;
-  return page({ title: 'Insights — Web Development Guides for Businesses | Tening Boris', description: 'Practical guides on mobile-first design, WordPress and website speed for business owners in Cameroon and across Africa.', path: '/insights/',
-    ld: [personLD, websiteLD, { '@type': 'Blog', url: abs('/insights/'), name: 'Insights by Tening Boris', author: { '@id': personId }, blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: abs('/insights/' + p.slug + '/'), datePublished: p.date })) }, crumbsLD(crumbs)] }, '/insights/', body);
+  return page({ title: 'Insights — Web Development Guides for Businesses | TENING BORIS', description: 'Practical guides on mobile-first design, WordPress and website speed for business owners in Cameroon and across Africa.', path: '/insights/',
+    ld: [personLD, websiteLD, { '@type': 'Blog', url: abs('/insights/'), name: 'Insights by TENING BORIS', author: { '@id': personId }, blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: abs('/insights/' + p.slug + '/'), datePublished: p.date })) }, crumbsLD(crumbs)] }, '/insights/', body);
 }
 
 function postPage(p) {
   const crumbs = [{ name: 'Home', href: '/' }, { name: 'Insights', href: '/insights/' }, { name: p.title, href: `/insights/${p.slug}/` }];
   const others = insights.filter((x) => x.slug !== p.slug).slice(0, 2);
   const body = `
-${pageHero({ crumbs, eyebrow: p.tag, h1: p.title, lede: p.excerpt, extra: `<p class="article-meta"><span>By Tening Boris</span><time datetime="${p.date}">${fmtDate(p.date)}</time><span>${p.readMins} min read</span></p>` })}
+${pageHero({ crumbs, eyebrow: p.tag, h1: p.title, lede: p.excerpt, extra: `<p class="article-meta"><span>By TENING BORIS</span><time datetime="${p.date}">${fmtDate(p.date)}</time><span>${p.readMins} min read</span></p>` })}
 <section class="section">
   <div class="wrap">
     <article class="article">${p.body.replace(/href="\/contact\/"/g, `href="${L('/contact/')}"`)}</article>
-    <div class="author-box">${picture({ name: 'tening-boris-square', widths: [400], sizes: '64px', alt: '', w: 400, h: 400 })}<p><strong>Tening Boris</strong> is a frontend developer in ${site.city}, Cameroon. He spent three years building client websites at Highupweb and now works freelance.</p></div>
+    <div class="author-box">${picture({ name: 'tening-boris-square', widths: [400], sizes: '64px', alt: '', w: 400, h: 400 })}<p><strong>TENING BORIS</strong> is a frontend developer in ${site.city}, Cameroon. He spent three years building client websites at Highupweb and now works freelance.</p></div>
   </div>
 </section>
 <section class="section on-paper-2" aria-labelledby="more-title">
@@ -655,7 +655,7 @@ ${pageHero({ crumbs, eyebrow: p.tag, h1: p.title, lede: p.excerpt, extra: `<p cl
   </div>
 </section>
 ${ctaBand()}`;
-  return page({ title: `${p.title} | Tening Boris`, description: p.description, path: `/insights/${p.slug}/`, type: 'article',
+  return page({ title: `${p.title} | TENING BORIS`, description: p.description, path: `/insights/${p.slug}/`, type: 'article',
     ld: [personLD, websiteLD, { '@type': 'BlogPosting', headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, author: { '@id': personId }, publisher: { '@id': personId }, mainEntityOfPage: abs(`/insights/${p.slug}/`), image: abs('/assets/img/og-default.jpg'), inLanguage: 'en' }, crumbsLD(crumbs)] }, '/insights/', body);
 }
 
@@ -670,7 +670,7 @@ function notFoundPage() {
     <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href="${L('/')}">Back to home ${I.arrow}</a><a class="btn btn--ghost" href="${L('/work/')}">See my work</a><a class="btn btn--ghost" href="${L('/contact/')}">Contact me</a></div>
   </div>
 </section>`;
-  return page({ title: 'Page not found — Tening Boris', description: 'The page you were looking for could not be found.', path: '/404.html', noindex: true }, '', body);
+  return page({ title: 'Page not found — TENING BORIS', description: 'The page you were looking for could not be found.', path: '/404.html', noindex: true }, '', body);
 }
 
 // ---------- write ----------

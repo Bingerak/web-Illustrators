@@ -1,4 +1,4 @@
-/* Tening Boris — site interactions. No dependencies, ~4 KB. */
+/* TENING BORIS — site interactions. No dependencies, ~4 KB. */
 (() => {
   'use strict';
   const $ = (s, el = document) => el.querySelector(s);

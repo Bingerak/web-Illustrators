@@ -7,7 +7,7 @@
 export const site = {
   // Change SITE_URL at build time:  SITE_URL=https://yourdomain.com node build.mjs
   url: (process.env.SITE_URL || 'https://webillustrators.online').replace(/\/$/, ''),
-  name: 'Tening Boris',
+  name: 'TENING BORIS',
   brand: 'Web Illustrators',
   role: 'Frontend Developer',
   locale: 'en',
@@ -40,7 +40,7 @@ export const proof = [
 ];
 
 export const home = {
-  title: 'Tening Boris — Freelance Frontend Developer in Yaoundé, Cameroon',
+  title: 'TENING BORIS — Freelance Frontend Developer in Yaoundé, Cameroon',
   description:
     'Freelance frontend and WordPress developer in Yaoundé, Cameroon. I build fast, responsive websites for businesses in Cameroon, across Africa and abroad. 15+ sites launched.',
   eyebrow: 'Frontend developer · Yaoundé, Cameroon',
@@ -333,12 +333,12 @@ export const principles = [
 ];
 
 export const about = {
-  title: 'About Tening Boris — Frontend Developer in Yaoundé',
+  title: 'About TENING BORIS — Frontend Developer in Yaoundé',
   description:
-    'Tening Boris is a frontend developer in Yaoundé, Cameroon. Three years at Highupweb, 15+ websites launched, now working freelance with businesses in Africa and abroad.',
+    'TENING BORIS is a frontend developer in Yaoundé, Cameroon. Three years at Highupweb, 15+ websites launched, now working freelance with businesses in Africa and abroad.',
   headline: 'I build websites that people find easy to use.',
   lede:
-    "I'm Tening Boris, a frontend developer based in Yaoundé, Cameroon. I also work under the name Web Illustrators.",
+    "I'm TENING BORIS, a frontend developer based in Yaoundé, Cameroon. I also work under the name Web Illustrators.",
   story: [
     'I started in web development through design: making things look right and feel clear. That led me to Highupweb, a digital agency in Yaoundé, where I spent three years as a Front End Developer, from October 2021 to December 2024.',
     'At Highupweb I built and maintained responsive websites for clients across e-commerce, healthcare supply, education and local services. I led several of those projects, working between designers, product owners and the business owners themselves, and I took more than fifteen sites through hosting, deployment and launch.',
@@ -348,7 +348,7 @@ export const about = {
 };
 
 export const servicesPage = {
-  title: 'Website Development Services in Cameroon — Tening Boris',
+  title: 'Website Development Services in Cameroon — TENING BORIS',
   description:
     'Business websites, WordPress development, redesigns, speed optimisation and maintenance for businesses in Cameroon and across Africa. Fixed quotes, clear process.',
   headline: 'Services built around what your website has to do.',
@@ -357,17 +357,17 @@ export const servicesPage = {
 };
 
 export const workPage = {
-  title: 'Portfolio — Websites Built by Tening Boris',
+  title: 'Portfolio — Websites Built by TENING BORIS',
   description:
-    'Case studies of websites Tening Boris led at Highupweb in Yaoundé: e-commerce stores, a medical-equipment catalogue, a training academy and a driving school.',
+    'Case studies of websites TENING BORIS led at Highupweb in Yaoundé: e-commerce stores, a medical-equipment catalogue, a training academy and a driving school.',
   headline: 'Selected work',
   lede:
     'Five client websites I led as part of the Highupweb team in Yaoundé. Each opens to a short case study, with a link to the live site.',
-  credit: 'All projects: designed by Highupweb, with Tening Boris as project lead.',
+  credit: 'All projects: designed by Highupweb, with TENING BORIS as project lead.',
 };
 
 export const contactPage = {
-  title: 'Contact Tening Boris — Start Your Website Project',
+  title: 'Contact TENING BORIS — Start Your Website Project',
   description:
     'Tell me about your website project. Freelance frontend and WordPress development in Yaoundé, Cameroon, for clients in Africa and worldwide. WhatsApp or form.',
   headline: "Let's discuss your project.",

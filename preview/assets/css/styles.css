@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tening Boris — design system
+   TENING BORIS — design system
    Ink + paper + Web Illustrators orange. One display face, one text face.
    ========================================================================== */
 
@@ -664,3 +664,5 @@ body.nav-open .wa-float { display: none; }
 .site-footer .muted { color: var(--muted-on-ink); }
 /* backdrop-filter creates a containing block for fixed children; keep the mobile menu full-screen */
 @media (max-width: 880px) { .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--ink); } }
+.brand__name { white-space: nowrap; }
+@media (max-width: 380px) { .brand__name { font-size: 1.02rem; } .nav-toggle { padding: 0 0.85rem; } }

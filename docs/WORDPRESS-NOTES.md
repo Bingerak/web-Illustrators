@@ -23,6 +23,6 @@ Remove the hand-written `<title>`, meta, canonical and Open Graph tags from the 
 
 ## Assets and licences
 
-- Photos and project screenshots: owned by Tening Boris (from the "WebIllustrators website content" folder).
+- Photos and project screenshots: owned by TENING BORIS (from the "WebIllustrators website content" folder).
 - Fonts: Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1 (licence files in `src/assets/fonts/`).
 - Icons: drawn inline as SVG for this project.

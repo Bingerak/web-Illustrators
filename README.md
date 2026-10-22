@@ -1,10 +1,10 @@
-# Tening Boris — Portfolio website
+# TENING BORIS — Portfolio website
 
 **Live preview:** https://bingerak.github.io/web-Illustrators/
 
 GitHub Pages serves this repo from `main` (root). The root `index.html` forwards to `preview/`, a relative-link build of the site. The workflow in `.github/workflows/pages.yml` rebuilds `preview/` automatically whenever `src/` or `build.mjs` changes. To rebuild it by hand: `OUT_DIR=preview PREVIEW=1 node build.mjs`. The contact form cannot send from GitHub Pages; deploy to Netlify for the real site.
 
-A fast, accessible, multi-page portfolio for **Tening Boris, Frontend Developer in Yaoundé, Cameroon**.
+A fast, accessible, multi-page portfolio for **TENING BORIS, Frontend Developer in Yaoundé, Cameroon**.
 Static HTML generated from one content file by a zero-dependency Node script. No framework, no database, nothing to patch.
 
 **Tested results (Lighthouse 12, local server):** Performance 98–100 · Accessibility 100 · Best Practices 100 · SEO 100, mobile and desktop. CLS 0 on every page.
@@ -120,5 +120,5 @@ These are on the site but came from sources that disagree or are dated. Please c
 ## 8. Licence
 
 - **Code** (`build.mjs`, `src/assets/css`, `src/assets/js`, configuration): Apache License 2.0, see `LICENSE`.
-- **Not covered by that licence:** photographs of Tening Boris, project screenshots, the Web Illustrators logo, and all written content in `src/content/`. These are © Tening Boris, all rights reserved.
+- **Not covered by that licence:** photographs of TENING BORIS, project screenshots, the Web Illustrators logo, and all written content in `src/content/`. These are © TENING BORIS, all rights reserved.
 - **Fonts:** Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1 (`src/assets/fonts/`).

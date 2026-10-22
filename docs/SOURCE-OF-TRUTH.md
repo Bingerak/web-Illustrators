@@ -1,4 +1,4 @@
-# Source of truth — Tening Boris portfolio
+# Source of truth — TENING BORIS portfolio
 
 Every fact on the website traces back to one of the sources below. Anything not listed here is not on the site.
 
@@ -14,7 +14,7 @@ Every fact on the website traces back to one of the sources below. Anything not 
 
 ## 1. Verified professional facts
 
-- **Name:** Tening Boris. **Location:** Yaoundé, Cameroon.
+- **Name:** TENING BORIS. **Location:** Yaoundé, Cameroon.
 - **Front End Developer, Highupweb, Yaoundé — Oct 2021 to Dec 2024** (resume)
   - Developed and maintained responsive websites for multiple clients (mobile + desktop)
   - Led collaboration with designers, product owners and stakeholders
@@ -44,7 +44,7 @@ Every fact on the website traces back to one of the sources below. Anything not 
 
 ## 3. Assets and their sources
 
-All from the `WebIllustrators website content` folder, owned by Tening Boris:
+All from the `WebIllustrators website content` folder, owned by TENING BORIS:
 `TENING BORIS.jpg` (studio portrait), five project screenshots, `web_illus` logo, `PROFILE banner` (photo used on About page). Optimised copies live in `src/assets/img/`.
 
 ## 4. Design elements preserved
