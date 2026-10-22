@@ -18,8 +18,8 @@ export const site = {
   email: 'teningboris01@gmail.com',
   phone: '+237682380446',
   phoneDisplay: '+237 682 380 446',
-  whatsapp: '237672713856', // digits only, used for wa.me links
-  whatsappDisplay: '+237 672 713 856',
+  whatsapp: '237682380446', // digits only, used for wa.me links (same number as phone)
+  whatsappDisplay: '+237 682 380 446',
   linkedin: 'https://www.linkedin.com/in/boris-tening-189b54226',
   responseTime: 'I reply within one working day.',
   hours: 'Monday – Friday, 8:00 – 18:30 WAT',

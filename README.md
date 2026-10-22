@@ -88,7 +88,7 @@ dist/                      built site (generated, do not edit)
 
 These are on the site but came from sources that disagree or are dated. Please check each one.
 
-1. **WhatsApp number.** The site uses **+237 672 713 856** (labelled WhatsApp on your old portfolio). Your 2025 resume lists **+237 682 380 446**, used here as the phone number. If WhatsApp is on 682…, change `whatsapp` in `site.mjs`.
+1. **Phone and WhatsApp:** confirmed as **+237 682 380 446** for both (22 Oct 2026).
 2. **LinkedIn URL.** The brief gave `linkedin.com/in/tening-boris-189b54226`; your resume and old site use `linkedin.com/in/boris-tening-189b54226`. The site uses the resume version. LinkedIn blocked automated access, so neither could be checked.
 3. **Domain.** Canonical URLs use `https://webillustrators.online` (from your resume). Change `SITE_URL` if the site will live elsewhere.
 4. **"25% increase in client retention"** appears in the Experience section exactly as stated on your resume. Keep it only if you can explain how it was measured if a client asks.

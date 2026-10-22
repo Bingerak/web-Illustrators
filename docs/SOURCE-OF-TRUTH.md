@@ -29,7 +29,7 @@ Every fact on the website traces back to one of the sources below. Anything not 
 - **Languages:** English (first language), French (A2, elementary)
 - **Skills (resume):** HTML5, CSS3, CMS platforms, WordPress, Git, responsive design, UI enhancement, web performance optimisation, cross-browser compatibility, data-security awareness, Microsoft Office
 - **Additional skills (portfolio wording):** graphic design, branding, motion graphics, print design; "learning" PHP, JavaScript, social media marketing, e-commerce, SEO
-- **Contact:** email teningboris01@gmail.com, phone +237 682 380 446 (resume); WhatsApp +237 672 713 856 (portfolio)
+- **Contact:** email teningboris01@gmail.com; phone and WhatsApp +237 682 380 446 (confirmed by Boris, 22 Oct 2026; the old portfolio listed 672 713 856 for WhatsApp)
 - **Web Illustrators** is his personal brand / studio name
 
 ## 2. Verified projects (all credited "Designed by Highupweb — project led by me")
