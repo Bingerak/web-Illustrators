@@ -364,7 +364,7 @@ function aboutPage() {
         <p class="lede" style="margin-top:1.5rem">${a.lede}</p>
         <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href="${L('/contact/')}">Discuss your project ${I.arrow}</a><a class="btn btn--ghost" href="${site.linkedin}" target="_blank" rel="noopener">${I.linkedin} LinkedIn</a></div>
       </div>
-      <div class="portrait"><div class="portrait__frame">${picture({ name: 'tening-boris-at-work', widths: [480, 760], sizes: '(max-width: 860px) 92vw, 40vw', alt: 'Tening Boris in a suit, seated at his desk and checking a website on his phone', w: 760, h: 829, eager: true })}</div></div>
+      <div class="portrait"><div class="portrait__frame">${picture({ name: 'tening-boris-about', widths: [480, 760], sizes: '(max-width: 860px) 92vw, 40vw', alt: 'Studio portrait of Tening Boris, frontend developer, in a navy blazer and light grey shirt', w: 760, h: 829, eager: true })}</div></div>
     </div>
   </div>
 </section>
